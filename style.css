@@ -600,7 +600,7 @@ a {
 
 .gallery-item img {
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
     height: auto;
     margin: auto;
     display: block;
@@ -960,5 +960,25 @@ footer p {
     
     .glowing-border {
         padding: 3px;
+    }
+
+    .gallery-item img {
+    width: 70%;
+    }
+    .gallery-item {
+    width: 90%;
+    }
+    .container {
+    height: auto;
+    }
+    #typing-text{
+        margin-top: 12px;
+        font-size: 38px;
+    }
+    .preloader img{
+        width: 250px;
+    }
+    .hero{
+        height: 1000px;
     }
 }
