@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    setTimeout(() => {
+      document.querySelector('.preloader').style.display = 'none';
+      document.body.classList.remove('loading');
+    }, 2500);
+    
     function startCursorBlink() {
         const cursor = document.querySelector('.cursor');
         setInterval(() => {

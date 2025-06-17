@@ -12,6 +12,56 @@
     --glow-color: rgba(138, 43, 226, 0.6);
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+
+@keyframes preloaderAnim {
+  0% {
+    transform: scale(0.2) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.2) rotate(360deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1) rotate(720deg);
+  }
+  80% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5) translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+
+/* Oculta el scroll durante la carga */
+body.loading {
+  overflow: hidden;
+}
+
+.preloader-logo {
+  width: 450px;
+  animation: preloaderAnim 2s ease-out forwards;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+}
+
 * {
     margin: 0;
     padding: 0;
